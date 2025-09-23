@@ -96,7 +96,7 @@ def generate_launch_description():
     spawn_robot_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             PathJoinSubstitution(
-                [FindPackageShare("rover_gazebo"), "launch", "spawn_robot.launch.py"]
+                [FindPackageShare("rover_gazebo"), "launch", "include/spawn_robot.launch.py"]
             )
         ),
         launch_arguments={

@@ -95,7 +95,7 @@ def generate_launch_description():
                 [
                     FindPackageShare("rover_gazebo"),
                     "launch",
-                    "simulate_robot.launch.py",
+                    "include/simulate_robot.launch.py",
                 ]
             )
         ),
