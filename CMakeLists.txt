@@ -8,16 +8,13 @@ endif()
 set(PACKAGE_DEPENDENCIES
     ament_cmake
     hardware_interface
-    ignition-gazebo6
-    ignition-msgs8
-    ignition-plugin1
-    ignition-transport11
     gz_ros2_control
     pluginlib
     rclcpp
     realtime_tools
     std_msgs
-    std_srvs)
+    std_srvs
+)
 
 foreach(PACKAGE IN ITEMS ${PACKAGE_DEPENDENCIES})
   find_package(${PACKAGE} REQUIRED)
