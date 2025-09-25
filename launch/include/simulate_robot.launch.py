@@ -90,7 +90,7 @@ def generate_launch_description():
         "robot_model",
         default_value=EnvironmentVariable(name="ROBOT_MODEL_NAME", default_value="rover_a1"),
         description="Specify robot model.",
-        choices=["rover_a1", "rover_a2"],
+        choices=["rover_a1"],
     )
 
     spawn_robot_launch = IncludeLaunchDescription(
@@ -119,7 +119,6 @@ def generate_launch_description():
         launch_arguments={
             "log_level": log_level,
             "namespace": namespace,
-            "publish_robot_state": "False",
             "use_sim": "True",
         }.items(),
     )

@@ -49,7 +49,7 @@ def generate_launch_description():
         "robot_model",
         default_value=EnvironmentVariable(name="ROBOT_MODEL_NAME", default_value="rover_a1"),
         description="Specify robot model.",
-        choices=["rover_a1", "rover_a2"],
+        choices=["rover_a1"],
     )
 
     x = LaunchConfiguration("x")
