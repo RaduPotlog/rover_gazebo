@@ -119,6 +119,7 @@ def generate_launch_description():
         launch_arguments={
             "log_level": log_level,
             "namespace": namespace,
+            "publish_robot_state": "False",
             "use_sim": "True",
         }.items(),
     )
