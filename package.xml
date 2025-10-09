@@ -33,6 +33,7 @@
   <!-- Rover dependency -->
   <exec_depend condition="$ROVER_ROS_BUILD_TYPE == simulation">rover_description</exec_depend>
   <exec_depend condition="$ROVER_ROS_BUILD_TYPE == simulation">rover_controller</exec_depend>
+  <exec_depend condition="$ROVER_ROS_BUILD_TYPE == simulation">rover_localization</exec_depend>
   
   <export>
     <build_type>ament_cmake</build_type>

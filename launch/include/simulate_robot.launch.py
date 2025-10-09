@@ -124,6 +124,23 @@ def generate_launch_description():
         }.items(),
     )
 
+    ekf_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution(
+                [
+                    FindPackageShare("rover_localization"),
+                    "launch",
+                    "rover_localization.launch.py",
+                ]
+            )
+        ),
+        launch_arguments={
+            "log_level": log_level,
+            "namespace": namespace,
+            "use_sim": "True",
+        }.items(),
+    )
+
     model_name = PythonExpression(["'", namespace, "' if '", namespace, "' else 'panther'"])
 
     namespaced_gz_bridge_config_path = ReplaceString(
@@ -180,6 +197,7 @@ def generate_launch_description():
         SetUseSimTime(True),
         spawn_robot_launch,
         controller_launch,
+        ekf_launch,
         gz_bridge,
         world_transform,
     ]
