@@ -1,6 +1,6 @@
 # rover_gazebo
 
-The package contains a launch file and source files used to run the robot simulation in Gazebo.
+Package containing a launch file and source files used to run the Rover simulation in Gazebo.
 
 ## Config Files
 
